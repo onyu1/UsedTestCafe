@@ -1,5 +1,5 @@
 import {Selector} from 'testcafe';
-fixture('Tested for Google')
+fixture('Todo Status Test')
     // .page('http://localhost:8181/')
     .page('http://34.64.140.229:8181/')
 

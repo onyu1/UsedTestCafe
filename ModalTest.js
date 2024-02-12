@@ -1,5 +1,5 @@
 import {Selector} from 'testcafe';
-fixture('Tested for Google')
+fixture('Todo Modal Test')
     .page('http://34.64.140.229:8181/')
 
 

@@ -5,12 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "StatusTest": "testcafe chrome -e ./StatusTest.js --disable-native-automation"
+    "StatusTest": "testcafe chrome -e ./StatusTest.js --disable-native-automation",
+    "makejsonreport": "testcafe chrome -e ./InitTest.js --disable-native-automation --reporter cucumber-json --skip-js-errors",
+    "showReport": "node report-generator.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "testcafe": "^3.5.0"
+    "multiple-cucumber-html-reporter": "^3.6.2",
+    "testcafe": "^3.5.0",
+    "testcafe-reporter-cucumber-json": "^6.3.0"
+
   }
 }

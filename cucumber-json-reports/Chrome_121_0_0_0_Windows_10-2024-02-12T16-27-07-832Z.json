@@ -1,0 +1,406 @@
+[
+  {
+    "description": "Tested for Google",
+    "elements": [
+      {
+        "id": "ScenarioLogo is visible",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "Logo is visible",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:0"
+            },
+            "name": "Logo is visible",
+            "result": {
+              "duration": 5782,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">Logo is visible</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "ScenarioSearch Button is visible",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "Search Button is visible",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:0"
+            },
+            "name": "Search Button is visible",
+            "result": {
+              "duration": 5683,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">Search Button is visible</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "ScenarioWrite Button is visible",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "Write Button is visible",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:0"
+            },
+            "name": "Write Button is visible",
+            "result": {
+              "duration": 5618,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">Write Button is visible</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "ScenarioSearchBar Text is visible",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "SearchBar Text is visible",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:0"
+            },
+            "name": "SearchBar Text is visible",
+            "result": {
+              "duration": 5452,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">SearchBar Text is visible</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "ScenarioSearchDate is visible",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "SearchDate is visible",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:0"
+            },
+            "name": "SearchDate is visible",
+            "result": {
+              "duration": 5461,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">SearchDate is visible</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "ScenarioList is empty",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "List is empty",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "failed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:0"
+            },
+            "name": "List is empty",
+            "result": {
+              "duration": 4019,
+              "error_message": "1) AssertionError: expected '' to deeply equal 'text'\n\n   + expected - actual\n\n   -''\n   +text\n\n\n   Browser: Chrome 121.0.0.0 / Windows 10\n\n      38 | \n      39 | test('List is empty', async t=>{\n      40 |     const Listempty = Selector('#scrollDiv')\n      41 |     // await console.log('aaaaaaaaa',Listempty.innerHtml)\n      42 |     // await console.log('bbbbbbbbbb',Listempty.innerText)\n   --------------------------------------------\n    &rarr; 43 |     await t.expect(Selector('#scrollDiv', {timeout:500}).innerText).eql('text','')\n   --------------------------------------------\n      44 |     const a = Selector('#scrollDiv', {timeout:500}).innerText\n      45 |     console.log('>>>>',a)\n      46 | \n      47 | \n      48 | });\n\n      at <anonymous> (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:43:69)\n      at asyncGeneratorStep (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:35)\n      at _next (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:35)\n      at <anonymous> (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:35)\n      at <anonymous> (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:35)\n      at <anonymous> (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:48:2)\n",
+              "status": "failed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">List is empty</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "ScenarioList is empty",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "List is empty",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:0"
+            },
+            "name": "List is empty",
+            "result": {
+              "duration": 400,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">List is empty</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "Scenariocreate Todo",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "create Todo",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "failed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:0"
+            },
+            "name": "create Todo",
+            "result": {
+              "duration": 367,
+              "error_message": "1) AssertionError: expected 500 to deeply equal 200\n\n   + expected - actual\n\n   -500\n   +200\n\n\n   Browser: Chrome 121.0.0.0 / Windows 10\n\n      76 |             \"charset\" : \"utf-8\"\n      77 |         },\n      78 |         body:CreateTodo,\n      79 | \n      80 |     })\n   --------------------------------------------\n    &rarr; 81 |     await t.expect(CheckReq.status).eql(200)\n   --------------------------------------------\n      82 | \n      83 | \n      84 |     const{num, ...others}= CheckReq.body[CheckReq.body.length-1];\n      85 |     await t.expect(others).eql(CreateTodo);\n      86 |     await t.eval(() => location.reload(true)); //새로고침\n\n      at <anonymous> (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:81:37)\n      at asyncGeneratorStep (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:35)\n      at _next (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:35)",
+              "status": "failed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">create Todo</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "Scenarioex1",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "ex1",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "failed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:0"
+            },
+            "name": "ex1",
+            "result": {
+              "duration": 3887,
+              "error_message": "1) AssertionError: expected false to be truthy\n\n   Browser: Chrome 121.0.0.0 / Windows 10\n\n      111 | \n      112 | \n      113 | //수정버튼 눌러서 리스트가 존재하는지 확인\n      114 | test('ex1', async t=>{\n      115 |     const ExistList = Selector('#scrollDiv')\n   --------------------------------------------\n    &rarr; 116 |     await t.expect(ExistList.hasChildElements).ok(); //자식요소가 있나요\n   --------------------------------------------\n      117 |     await t.expect(ExistList.textContent).contains('Test title'); // 자식요소에 이글자가 있나오\n      118 | \n      119 | });\n      120 | \n      121 | \n\n      at <anonymous> (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:116:48)\n      at asyncGeneratorStep (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:35)\n      at _next (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:35)\n      at <anonymous> (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:35)\n      at <anonymous> (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:35)\n      at <anonymous> (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:119:2)\n",
+              "status": "failed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">ex1</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "Scenariocreate Todo",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "create Todo",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "failed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:0"
+            },
+            "name": "create Todo",
+            "result": {
+              "duration": 433,
+              "error_message": "1) AssertionError: expected 500 to deeply equal 200\n\n   + expected - actual\n\n   -500\n   +200\n\n\n   Browser: Chrome 121.0.0.0 / Windows 10\n\n      139 |             \"content-type\": \"application/json\",\n      140 |             \"charset\":\"utf-8\"\n      141 |         },\n      142 |         body:reqData\n      143 |     })\n   --------------------------------------------\n    &rarr; 144 |     await t.expect(req.status).eql(200)\n   --------------------------------------------\n      145 | \n      146 |     // 1번 각각의 값을 비교\n      147 |     // await t.expect(req.body[req.body.length-1].title).eql(reqData.title)\n      148 |     //        .expect(req.body[req.body.length-1].content).eql(reqData.content)\n      149 |     //        .expect(req.body[req.body.length-1].status).eql(reqData.status)\n\n      at <anonymous> (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:144:32)\n      at asyncGeneratorStep (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:35)\n      at _next (C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1:35)",
+              "status": "failed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">create Todo</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      }
+    ],
+    "id": "Tested for Google",
+    "keyword": "Feature",
+    "line": 0,
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "121.0.0.0"
+      },
+      "device": "Windows",
+      "platform": {
+        "name": "windows",
+        "version": "10"
+      },
+      "reportTime": "2024-02-12T16:27:07.832Z",
+      "startTime": "2024-02-12T16:26:30.366Z"
+    },
+    "name": "Tested for Google",
+    "runInfo": {
+      "endTime": "2024-02-12T16:27:07.832Z",
+      "passed": 6,
+      "startTime": "2024-02-12T16:26:30.366Z",
+      "testCount": 10,
+      "userAgents": [
+        "Chrome 121.0.0.0 / Windows 10"
+      ],
+      "warnings": []
+    },
+    "skipped": false,
+    "tags": [
+      {
+        "line": 0,
+        "name": "@create"
+      },
+      {
+        "line": 0,
+        "name": "@todo"
+      },
+      {
+        "line": 0,
+        "name": "@ex1"
+      },
+      {
+        "line": 0,
+        "name": "@list"
+      },
+      {
+        "line": 0,
+        "name": "@empty"
+      },
+      {
+        "line": 0,
+        "name": "@searchdate"
+      },
+      {
+        "line": 0,
+        "name": "@visible"
+      },
+      {
+        "line": 0,
+        "name": "@searchbar"
+      },
+      {
+        "line": 0,
+        "name": "@text"
+      },
+      {
+        "line": 0,
+        "name": "@write"
+      },
+      {
+        "line": 0,
+        "name": "@button"
+      },
+      {
+        "line": 0,
+        "name": "@search"
+      },
+      {
+        "line": 0,
+        "name": "@logo"
+      },
+      {
+        "line": 0,
+        "name": "@tested"
+      },
+      {
+        "line": 0,
+        "name": "@for"
+      },
+      {
+        "line": 0,
+        "name": "@google"
+      }
+    ],
+    "uri": "C:\\Users\\dhsdb\\IdeaProjects\\todotestwithtestcafe\\InitTest.js:1"
+  }
+]
