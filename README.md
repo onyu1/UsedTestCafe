@@ -1,6 +1,15 @@
-안녕하세요! 해당 프로젝트는 To Do List 웹 페이지를 TestCafe를 이용하여 자동화 테스트를 수행하는 프로젝트이며, 현재 진행중입니다!
-검증하고 있는 To Do List 페이지의 경우 다음 url(http://34.64.140.229:8181/#)로 접속하시면 보실 수 있습니다!
-TC 파일의 경우 TC 파일 링크(https://github.com/onyu1/UsedTestCafe/blob/master/TC%20Directory/To%20Do%20List%20Test%20Case.xlsx)를 클릭하시고 View raw를 누르시면 다운받아집니다!
+<h1>안녕하세요!</h1>
+<br/>
+
+<h2>해당 프로젝트는 To Do List 웹 페이지를 TestCafe를 이용하여 자동화 테스트를 수행하는 프로젝트이며, 현재 진행중입니다!</h2>
+<br/>
+
+검증하고 있는 To Do List 페이지의 경우 [ToDo Page](http://34.64.140.229:8181/#)로 접속하시면 보실 수 있습니다!
+<br/>
+
+TC 파일의 경우 [TC 파일](https://github.com/onyu1/UsedTestCafe/blob/master/TC%20Directory/To%20Do%20List%20Test%20Case.xlsx)을 클릭하시고 View raw를 누르시면 다운받아집니다!
+<br/>
+
 테스트 결과 리포트는 하단의 사진으로 첨부해두었습니다!
 
 
@@ -17,3 +26,13 @@ TC 파일의 경우 TC 파일 링크(https://github.com/onyu1/UsedTestCafe/blob/
 ![Edge](https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white)
 ![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white)
 ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)
+
+<h1>테스트 결과 리포트</h1>
+<br/>
+
+1.리포트 대시보드
+![report1](https://github.com/onyu1/UsedTestCafe/assets/121859040/6c9ca041-89d7-4a2b-81e6-b131d3090881)
+2.테스트 결과 상세
+![report2](https://github.com/onyu1/UsedTestCafe/assets/121859040/1f1ff790-8707-4017-9e0a-6c53639c5a76)
+3.테스트 에러 발생 시 보여지는 내용
+![report3](https://github.com/onyu1/UsedTestCafe/assets/121859040/18d27022-f773-45f9-a543-129693ef7807)
