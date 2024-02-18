@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "InitTest": "testcafe chrome -e ./InitTest.js --disable-native-automation",
     "StatusTest": "testcafe chrome -e ./StatusTest.js --disable-native-automation",
     "EditTest": "testcafe chrome -e ./EditTest.js --disable-native-automation",
     "DeleteTest": "testcafe chrome -e ./DeleteTest.js --disable-native-automation",
     "SearchTest": "testcafe chrome -e ./SearchTest.js --disable-native-automation",
+    "ScrollTest": "testcafe chrome -e ./ScrollTest.js --disable-native-automation",
     "makejsonreport": "testcafe chrome -e ./InitTest.js --disable-native-automation --reporter cucumber-json --skip-js-errors",
     "showReport": "node report-generator.js"
   },
