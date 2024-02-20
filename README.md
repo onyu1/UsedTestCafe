@@ -36,3 +36,10 @@ TC 파일의 경우 [TC 파일](https://github.com/onyu1/UsedTestCafe/blob/maste
 ![report2](https://github.com/onyu1/UsedTestCafe/assets/121859040/1f1ff790-8707-4017-9e0a-6c53639c5a76)
 3.테스트 에러 발생 시 보여지는 내용
 ![report3](https://github.com/onyu1/UsedTestCafe/assets/121859040/18d27022-f773-45f9-a543-129693ef7807)
+
+
+package.json 
+- "--disable-native-automation" 명렁어를 쓰는 이유 :
+testcafe가 테스트 진행시 브라우저 설정 권한을 크롬이나 엣지 브라우저에게 맡김.
+그래서 http로 요청했음에도 불구하고 https로 변경됨.
+따라서 브라우저 설정에 관한 권한을 testcafe로 위임시켜 http로 유지하게하기 위해서 해당 옵션 사용
