@@ -6,7 +6,7 @@ fixture('Todo Modal Test')
 
 
 test('TC00000016 modal text', async t=>{
-    const WriteButton = Selector('[data-bs-target="#addModal"]')
+    const WriteButton = Selector('.searchBar > [data-bs-target="#addModal"]')
     await t.click(WriteButton).wait(3000);  //투두 생성 버튼 클릭
 
     const ModalTitle = Selector('#exampleModalLabel')   //모달 제목란
@@ -24,7 +24,7 @@ test('TC00000016 modal text', async t=>{
 
     //글쓰기 > 제목 입력
 test('TC00000017 modal title input text', async t=>{
-    const WriteButton = Selector('[data-bs-target="#addModal"]')    //투두 생성 버튼
+    const WriteButton = Selector('.searchBar > [data-bs-target="#addModal"]')    //투두 생성 버튼
     await t.click(WriteButton).wait(3000);  //생성 버튼 클릭
 
     const ModalTitle = Selector('#exampleModalLabel')   //모달 제목란
@@ -34,7 +34,7 @@ test('TC00000017 modal title input text', async t=>{
 
 
 test('TC00000018 modal content input text', async t=>{
-    const WriteBtn = Selector('[data-bs-target="#addModal"]')   //생성 버튼
+    const WriteBtn = Selector('.searchBar > [data-bs-target="#addModal"]')   //생성 버튼
     await t.click(WriteBtn).wait(3000);
 
     const ModalContent = Selector('#ModalContent')  //모달 내용란
@@ -42,13 +42,15 @@ test('TC00000018 modal content input text', async t=>{
 });
 
 
-    //날짜입력 나중에 다시하깅
+
 test('TC00000019 modal input date', async t=>{
-    const WriteButton = Selector('[data-bs-target="#addModal"]')
+    const WriteButton = Selector('.searchBar > [data-bs-target="#addModal"]')
     await t.click(WriteButton).wait(3000);
 
     const ModalDate = Selector('#addDate')
-    await t.click(ModalDate);
+    await t.typeText(ModalDate,'2024-02-20').wait(2000);
+    await t.expect(ModalDate.value).eql('2024-02-20');
+
 });
 
 
@@ -57,7 +59,7 @@ test('TC00000020 save todo', async t=>{
     await t.setNativeDialogHandler(() => true);
 
     // 모달 표시 버튼 클릭
-    const WriteButton = Selector('[data-bs-target="#addModal"]')
+    const WriteButton = Selector('.searchBar > [data-bs-target="#addModal"]')
     await t.click(WriteButton).wait(3000);
 
     // 모달에서 저장 버튼 클릭
@@ -76,7 +78,7 @@ test('TC00000020 save todo', async t=>{
 test('TC00000021 alert test', async t=>{
     await t.setNativeDialogHandler(() => true); //다이얼로그가 나타날때 자동으로 확인버튼 누름
 
-    const WriteBtn = Selector('[data-bs-target="#addModal"]')
+    const WriteBtn = Selector('.searchBar > [data-bs-target="#addModal"]')
     await t.click(WriteBtn).wait(2000);
 
     const ModalTitle = Selector('#exampleModalLabel')
@@ -90,10 +92,28 @@ test('TC00000021 alert test', async t=>{
         .expect(AlertHistory[0].text).eql('날짜를 선택하세요.');
 });
 
+test('TC00000022 alert test', async t=>{
+    await t.setNativeDialogHandler(() => true); //다이얼로그가 나타날때 자동으로 확인버튼 누름
+
+    const WriteBtn = Selector('.searchBar > [data-bs-target="#addModal"]')
+    await t.click(WriteBtn).wait(2000);
+
+    const ModalDate = Selector('#addDate')
+    await t.typeText(ModalDate,'2024-02-20').wait(2000);
+    // await t.expect(ModalDate.value).eql('2024-02-20');
+
+    const SaveBtn = Selector('#modalSaveBtn')
+    await t.click(SaveBtn).wait(2000);
+
+    const AlertHistory = await t.getNativeDialogHistory();
+    await t.expect(AlertHistory[0].type).eql('alert')
+        .expect(AlertHistory[0].text).eql('제목을 입력하세요.');
+});
+
 test('TC00000023 alert test1', async t=>{
     await t.setNativeDialogHandler(() => true);
 
-    const WriteBtn = Selector('[data-bs-target="#addModal"]')
+    const WriteBtn = Selector('.searchBar > [data-bs-target="#addModal"]')
     await t.click(WriteBtn).wait(2000);
 
     const ModalContent = Selector('#ModalContent')
@@ -107,10 +127,14 @@ test('TC00000023 alert test1', async t=>{
         .expect(AlertHistory[0].text).eql('제목과 날짜를 입력하세요.');
 });
 
-test('TC00000025 alert test2', async t=>{
+
+
+
+
+test('TC00000024 alert test2', async t=>{
     await t.setNativeDialogHandler(() => true);
 
-    const WriteBtn = Selector('[data-bs-target="#addModal"]')
+    const WriteBtn = Selector('.searchBar > [data-bs-target="#addModal"]')
     await t.click(WriteBtn);
 
     const ModalTitle = Selector('#exampleModalLabel')
@@ -125,4 +149,88 @@ test('TC00000025 alert test2', async t=>{
     const AlertHistory = await t.getNativeDialogHistory();
     await t.expect(AlertHistory[0].type).eql('alert')
         .expect(AlertHistory[0].text).eql('날짜를 선택하세요.');
+});
+
+test('TC00000025 alert test2', async t=>{
+    await t.setNativeDialogHandler(() => true);
+
+    const WriteBtn = Selector('.searchBar > [data-bs-target="#addModal"]')
+    await t.click(WriteBtn);
+
+    const ModalContent = Selector('#ModalContent')
+    await t.typeText(ModalContent(), 'test content');
+
+    const ModalDate = Selector('#addDate')
+    await t.typeText(ModalDate,'2024-02-20').wait(2000);
+
+    const SaveBtn = Selector('#modalSaveBtn')
+    await t.click(SaveBtn).wait(2000);
+
+    const AlertHistory = await t.getNativeDialogHistory();
+    await t.expect(AlertHistory[0].type).eql('alert')
+        .expect(AlertHistory[0].text).eql('제목을 입력하세요.');
+});
+
+
+test('TC00000026 alert test', async t=>{
+    await t.setNativeDialogHandler(() => true); //다이얼로그가 나타날때 자동으로 확인버튼 누름
+
+    const WriteBtn = Selector('.searchBar > [data-bs-target="#addModal"]')
+    await t.click(WriteBtn).wait(2000);
+
+    const ModalTitle = Selector('#exampleModalLabel')
+    await t.typeText(ModalTitle, 'test title');
+
+    const ModalDate = Selector('#addDate')
+    await t.typeText(ModalDate,'2024-02-20').wait(2000);
+    // await t.expect(ModalDate.value).eql('2024-02-20');
+
+    const SaveBtn = Selector('#modalSaveBtn')
+    await t.click(SaveBtn).wait(2000);
+
+    const FirstTodo = Selector('#scrollDiv > .card .card-body');//#scrollDiv 안에 있는 첫 번째 .card의 .card-body를 선택
+    const FStatusBtn = Selector(FirstTodo).find('[data-bs-toggle="dropdown"]');
+    await t.expect(FirstTodo.textContent).contains('test title');
+    await t.expect(FStatusBtn.textContent).contains('대기중');
+
+    //테스트 완료 후 삭제
+    const ScrollDiv = Selector('#scrollDiv')
+    const DelBtn = ScrollDiv.find('.deleteBtn');  //삭제 버튼
+
+    await t.setNativeDialogHandler(() => true); //네이티브 대화 상자에 대한 핸들러 설정 ('확인'버튼 누르도록)
+    await t.click(DelBtn).wait(2000);
+
+});
+
+test('TC00000027 alert test', async t=>{
+    await t.setNativeDialogHandler(() => true); //다이얼로그가 나타날때 자동으로 확인버튼 누름
+
+    const WriteBtn = Selector('.searchBar > [data-bs-target="#addModal"]')
+    await t.click(WriteBtn).wait(2000);
+
+    const ModalTitle = Selector('#exampleModalLabel')
+    await t.typeText(ModalTitle, 'test title');
+
+    const ModalContent = Selector('#ModalContent')
+    await t.typeText(ModalContent(), 'test content');
+
+    const ModalDate = Selector('#addDate')
+    await t.typeText(ModalDate,'2024-02-20').wait(2000);
+    // await t.expect(ModalDate.value).eql('2024-02-20');
+
+    const SaveBtn = Selector('#modalSaveBtn')
+    await t.click(SaveBtn).wait(2000);
+
+    const FirstTodo = Selector('#scrollDiv > .card .card-body');//#scrollDiv 안에 있는 첫 번째 .card의 .card-body를 선택
+    const FStatusBtn = Selector(FirstTodo).find('[data-bs-toggle="dropdown"]');
+    await t.expect(FirstTodo.textContent).contains('test title');
+    await t.expect(FStatusBtn.textContent).contains('대기중');
+
+    //테스트 완료 후 삭제
+    const ScrollDiv = Selector('#scrollDiv')
+    const DelBtn = ScrollDiv.find('.deleteBtn');  //삭제 버튼
+
+    await t.setNativeDialogHandler(() => true); //네이티브 대화 상자에 대한 핸들러 설정 ('확인'버튼 누르도록)
+    await t.click(DelBtn).wait(2000);
+
 });
