@@ -208,3 +208,19 @@ test('sample', async t=> {
     // await t.eval(() => location.reload(true));  //새로고침
     // await t.wait(2000);
 });
+
+// test ('삭제', async t=>{
+//     const ScrollDiv = Selector('#scrollDiv')
+//     const DelBtn = ScrollDiv.find('.deleteBtn');  //삭제 버튼
+//
+//     await t.setNativeDialogHandler(() => true); //네이티브 대화 상자에 대한 핸들러 설정 ('확인'버튼 누르도록)
+//     await t.click(DelBtn).wait(2000);
+//     await t.click(DelBtn).wait(2000);
+//     await t.click(DelBtn).wait(2000);
+//     await t.click(DelBtn).wait(2000);
+//     await t.click(DelBtn).wait(2000);
+//     await t.click(DelBtn).wait(2000);
+//     await t.click(DelBtn).wait(2000);
+//     await t.click(DelBtn).wait(2000);
+//
+// });

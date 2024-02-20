@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "InitTest": "testcafe chrome -e ./InitTest.js --disable-native-automation",
+    "ModalTest": "testcafe chrome -e ./ModalTest.js --disable-native-automation",
     "StatusTest": "testcafe chrome -e ./StatusTest.js --disable-native-automation",
     "EditTest": "testcafe chrome -e ./EditTest.js --disable-native-automation",
     "DeleteTest": "testcafe chrome -e ./DeleteTest.js --disable-native-automation",
