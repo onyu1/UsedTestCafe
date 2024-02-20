@@ -40,7 +40,7 @@ TC 파일의 경우 [TC 파일](https://github.com/onyu1/UsedTestCafe/blob/maste
 
 package.json 
 - "--disable-native-automation" 명렁어를 쓰는 이유 :
-<br/>
+
 testcafe가 테스트 진행시 브라우저 설정 권한을 크롬이나 엣지 브라우저에게 맡김.
 <br/>
 그래서 http로 요청했음에도 불구하고 https로 변경됨.
