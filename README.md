@@ -8,7 +8,7 @@
 검증하고 있는 To Do List 페이지의 경우 [ToDo Page](http://34.64.140.229:8181/#)로 접속하시면 보실 수 있습니다!
 <br/>
 
-TC 파일의 경우 [TC 파일](https://github.com/onyu1/UsedTestCafe/raw/master/TC%20Directory/To%20Do%20List%20Test%20Case%20v1.1.xlsx)을 클릭하시면 다운받아집니다!
+TC 파일의 경우 [TC 파일](https://github.com/onyu1/UsedTestCafe/raw/master/TC%20Directory/TestCafe_To%20Do%20List_TestCase_v1.1_20240219.xlsx)을 클릭하시면 다운받아집니다!
 <br/>
 
 테스트 결과 리포트는 하단의 사진으로 첨부해두었습니다!
