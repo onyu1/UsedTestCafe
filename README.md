@@ -1,13 +1,14 @@
 <h1>안녕하세요!</h1>
 <br/>
 
-<h2>해당 프로젝트는 To Do List 웹 페이지를 TestCafe를 이용하여 자동화 테스트를 수행하는 프로젝트이며, 현재 진행중입니다!</h2>
+<h2>해당 프로젝트는 To Do List 웹 페이지를 TestCafe를 이용하여 
+  <br/>자동화 테스트를 수행하는 프로젝트입니다!</h2>
 <br/>
 
 검증하고 있는 To Do List 페이지의 경우 [ToDo Page](http://34.64.140.229:8181/#)로 접속하시면 보실 수 있습니다!
 <br/>
 
-TC 파일의 경우 [TC 파일](https://github.com/onyu1/UsedTestCafe/blob/master/TC%20Directory/To%20Do%20List%20Test%20Case.xlsx)을 클릭하시고 View raw를 누르시면 다운받아집니다!
+TC 파일의 경우 [TC 파일](https://github.com/onyu1/UsedTestCafe/raw/master/TC%20Directory/To%20Do%20List%20Test%20Case%20v1.1.xlsx)을 클릭하시면 다운받아집니다!
 <br/>
 
 테스트 결과 리포트는 하단의 사진으로 첨부해두었습니다!
@@ -36,3 +37,13 @@ TC 파일의 경우 [TC 파일](https://github.com/onyu1/UsedTestCafe/blob/maste
 ![report2](https://github.com/onyu1/UsedTestCafe/assets/121859040/1f1ff790-8707-4017-9e0a-6c53639c5a76)
 3.테스트 에러 발생 시 보여지는 내용
 ![report3](https://github.com/onyu1/UsedTestCafe/assets/121859040/18d27022-f773-45f9-a543-129693ef7807)
+
+
+package.json 
+- "--disable-native-automation" 명렁어를 쓰는 이유 :
+
+testcafe가 테스트 진행시 브라우저 설정 권한을 크롬이나 엣지 브라우저에게 맡김.
+<br/>
+그래서 http로 요청했음에도 불구하고 https로 변경됨.
+<br/>
+따라서 브라우저 설정에 관한 권한을 testcafe로 위임시켜 http로 유지하게하기 위해서 해당 옵션 사용
